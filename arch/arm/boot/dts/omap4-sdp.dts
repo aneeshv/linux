@@ -8,6 +8,7 @@
 /dts-v1/;
 
 /include/ "omap4.dtsi"
+/include/ "elpida_ecb240abacn.dtsi"
 
 / {
 	model = "TI OMAP4 SDP board";
@@ -16,5 +17,17 @@
 	memory {
 		device_type = "memory";
 		reg = <0x80000000 0x40000000>; /* 1 GB */
+	};
+
+	ocp {
+		emif1: emif@0x4c000000 {
+			cs1-used;
+			device-handle = <&elpida_ECB240ABACN>;
+		};
+
+		emif2: emif@0x4d000000 {
+			cs1-used;
+			device-handle = <&elpida_ECB240ABACN>;
+		};
 	};
 };
