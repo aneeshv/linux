@@ -5,6 +5,10 @@
 menu "Serial drivers"
 	depends on HAS_IOMEM
 
+config ANEESH_SERIAL
+	tristate "Aneesh's serial driver"
+	default m
+
 #
 # The new 8250/16550 serial drivers
 config SERIAL_8250

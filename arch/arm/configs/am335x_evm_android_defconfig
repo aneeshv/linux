@@ -1473,6 +1473,7 @@ CONFIG_DEVKMEM=y
 #
 # Serial drivers
 #
+CONFIG_ANEESH_SERIAL=m
 # CONFIG_SERIAL_8250 is not set
 
 #
