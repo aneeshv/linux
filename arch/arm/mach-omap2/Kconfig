@@ -10,8 +10,6 @@ config ARCH_OMAP2PLUS_TYPICAL
 	select PM_RUNTIME
 	select VFP
 	select NEON if ARCH_OMAP3 || ARCH_OMAP4
-	select SERIAL_OMAP
-	select SERIAL_OMAP_CONSOLE
 	select I2C
 	select I2C_OMAP
 	select MENELAUS if ARCH_OMAP2
