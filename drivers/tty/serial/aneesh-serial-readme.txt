@@ -9,3 +9,7 @@ In rowboat-android/device/ti/beaglebone/init.am335xevm.rc
  # Default Read Ahead value for sdcards
      write /sys/block/mmcblk0/queue/read_ahead_kb 2048
 
+Passing Module params
+*********************
+-    insmod /system/lib/modules/aneesh-serial.ko
++    insmod /system/lib/modules/aneesh-serial.ko aneesh_ser_debug=1
