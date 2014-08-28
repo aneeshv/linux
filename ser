@@ -1,0 +1,18 @@
+#!/bin/bash
+shopt -s expand_aliases
+source /home/a0393566local/saved/Dropbox/technical/generic/scripts/aliases
+set -o nounset
+set -o errexit
+trap "exit" INT TERM EXIT
+############ Add your commands here ##############
+make modules
+#make modules_install
+until adb remount; do sleep 1; done
+adb shell mkdir -p system/lib/modules/
+adb push $ANDROID/kernel/drivers/tty/serial/aneesh-serial.ko system/lib/modules/
+adb shell chmod 644 system/lib/modules/aneesh-serial.ko
+adb reboot; fastboot reboot
+#fastboot oem format
+#fastboot flash boot $ANDROID/out/target/product/beagleboneblack/boot.img
+#fastboot reboot
+
