@@ -7,7 +7,9 @@ MODULE_PARM_DESC(aneesh_ser_debug, "Enable module debug");
 
 static int aneesh_serial_probe(struct platform_device *pdev)
 {
-	return -1;
+	printk("aneesh-serial: pdev->id %d\n", pdev->id);
+
+	return 0;
 }
 
 static int aneesh_serial_remove(struct platform_device *pdev)
