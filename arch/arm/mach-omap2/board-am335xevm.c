@@ -2596,7 +2596,7 @@ static struct i2c_board_info am335x_i2c1_boardinfo[] = {
 	},
 	{
 		/* bq27421 Gas Gauge */
-		I2C_BOARD_INFO("bq274xx", 0x55),
+		I2C_BOARD_INFO("bq27542", 0x55),
 	},
 };
 
